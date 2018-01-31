@@ -407,9 +407,9 @@
                 break;
             }
 
-            itemContainer.addClass(itemContainerClass).append(itemContent);
+            itemContainer.addClass(itemContainerClass).append(itemContent).addClass("page-item");
 
-            itemContent.addClass(itemContentClass).html(text).on("click", null, {type: type, page: page}, $.proxy(this.onPageItemClicked, this));
+            itemContent.addClass(itemContentClass)..addClass("page-link").html(text).on("click", null, {type: type, page: page}, $.proxy(this.onPageItemClicked, this));
 
             if (this.options.pageUrl) {
                 itemContent.attr("href", this.getValueFromOption(this.options.pageUrl, type, page, this.currentPage));
